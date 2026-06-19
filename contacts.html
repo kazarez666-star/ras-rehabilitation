@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Полезные ресурсы — Путь к ребёнку</title>
+  <meta name="description" content="Проверенные организации, фонды и ресурсы для семей с детьми с РАС." />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { 50: '#f0f7f6', 100: '#d9edea', 200: '#b3dbd5', 300: '#85c2b9', 400: '#57a399', 500: '#3d877d', 600: '#306b64', 700: '#295752', 800: '#244643', 900: '#203b39', 950: '#0f2322' },
+            sand: { 50: '#fbf8f3', 100: '#f5ede0', 200: '#ead9bf', 300: '#dcc098', 400: '#cda472', 500: '#c08c54', 600: '#b27747', 700: '#945e3c', 800: '#784d37', 900: '#62412f' },
+          },
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'], display: ['Manrope', 'system-ui', 'sans-serif'] },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: #fbf8f3; color: #203b39; }
+    .font-display { font-family: 'Manrope', sans-serif; }
+    ::selection { background: #b3dbd5; color: #0f2322; }
+    :focus-visible { outline: none; box-shadow: 0 0 0 2px #fbf8f3, 0 0 0 4px #3d877d; border-radius: 4px; }
+    .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .mobile-menu { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+    .mobile-menu.open { max-height: 400px; }
+  </style>
+</head>
+<body class="min-h-screen antialiased">
+
+  <!-- HEADER -->
+  <header class="sticky top-0 z-40 border-b border-brand-100/60 bg-sand-50/80 backdrop-blur-md" x-data="{ open: false }">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex h-16 items-center justify-between">
+      <a href="index.html" class="group flex items-center gap-2">
+        <div class="flex h-9 w-9 items-center justify-center rounded-lg bg-brand-600 text-white"><i data-lucide="brain" class="h-5 w-5"></i></div>
+        <span class="font-display text-lg font-bold text-brand-950">Путь к ребёнку</span>
+      </a>
+      <nav class="hidden md:block">
+        <ul class="flex items-center gap-1">
+          <li><a href="index.html" class="rounded-full px-4 py-2 text-sm font-medium text-brand-800 hover:bg-brand-100">Главная</a></li>
+          <li><a href="stages.html" class="rounded-full px-4 py-2 text-sm font-medium text-brand-800 hover:bg-brand-100">Этапы</a></li>
+          <li><a href="stages.html#faq" class="rounded-full px-4 py-2 text-sm font-medium text-brand-800 hover:bg-brand-100">Вопросы</a></li>
+          <li><a href="contacts.html" class="rounded-full px-4 py-2 text-sm font-medium text-brand-800 hover:bg-brand-100">Контакты</a></li>
+        </ul>
+      </nav>
+      <button type="button" class="md:hidden rounded-md p-2 text-brand-800 hover:bg-brand-100" @click="open = !open" aria-label="Меню">
+        <i x-show="!open" data-lucide="menu" class="h-6 w-6"></i>
+        <i x-show="open" data-lucide="x" class="h-6 w-6"></i>
+      </button>
+    </div>
+    <div class="mobile-menu md:hidden border-t border-brand-100" :class="{ 'open': open }">
+      <nav class="mx-auto max-w-7xl px-4 py-4">
+        <ul class="flex flex-col gap-1">
+          <li><a href="index.html" class="block rounded-lg px-4 py-3 text-base font-medium text-brand-800 hover:bg-brand-100">Главная</a></li>
+          <li><a href="stages.html" class="block rounded-lg px-4 py-3 text-base font-medium text-brand-800 hover:bg-brand-100">Этапы</a></li>
+          <li><a href="stages.html#faq" class="block rounded-lg px-4 py-3 text-base font-medium text-brand-800 hover:bg-brand-100">Вопросы</a></li>
+          <li><a href="contacts.html" class="block rounded-lg px-4 py-3 text-base font-medium text-brand-800 hover:bg-brand-100">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="py-16 md:py-24">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="reveal mx-auto max-w-3xl text-center">
+          <span class="inline-block rounded-full bg-brand-100 px-4 py-1.5 text-sm font-medium text-brand-700">Поддержка рядом</span>
+          <h1 class="mt-6 font-display text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-brand-950">Полезные ресурсы</h1>
+          <p class="mt-6 text-lg md:text-xl text-brand-700 leading-relaxed">Подборка проверенных организаций, фондов и информационных ресурсов для семей, воспитывающих детей с РАС.</p>
+        </div>
+
+        <div class="reveal mx-auto mt-16 grid max-w-5xl gap-8 md:grid-cols-3">
+          <!-- Фонды -->
+          <div class="rounded-2xl border border-brand-100 bg-white/70 p-6 backdrop-blur-sm">
+            <div class="flex items-center gap-3">
+              <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-brand-100 text-brand-700"><i data-lucide="globe" class="h-5 w-5"></i></div>
+              <h2 class="font-display text-lg font-bold text-brand-950">Фонды и организации</h2>
+            </div>
+            <ul class="mt-6 space-y-5">
+              <li>
+                <a href="https://autism-fond.ru" target="_blank" rel="noopener noreferrer" class="group block">
+                  <div class="flex items-start justify-between gap-2">
+                    <h3 class="font-semibold text-brand-900 group-hover:text-brand-600 transition-colors">Фонд "Выход"</h3>
+                    <i data-lucide="external-link" class="mt-0.5 h-4 w-4 flex-shrink-0 text-brand-400 group-hover:text-brand-600"></i>
+                  </div>
+                  <p class="mt-1 text-sm leading-relaxed text-brand-700">Помощь людям с аутизмом в России, методическая поддержка, горячая линия.</p>
+                  <span class="mt-1 inline-block text-xs text-brand-500 group-hover:text-brand-700">autism-fond.ru</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://nakedhearts.org" target="_blank" rel="noopener noreferrer" class="group block">
+                  <div class="flex items-start justify-between gap-2">
+                    <h3 class="font-semibold text-brand-900 group-hover:text-brand-600 transition-colors">Фонд "Обнажённые сердца"</h3>
+                    <i data-lucide="external-link" class="mt-0.5 h-4 w-4 flex-shrink-0 text-brand-400 group-hover:text-brand-600"></i>
+                  </div>
+                  <p class="mt-1 text-sm leading-relaxed text-brand-700">Развитие инклюзивного образования, поддержка семей, программа раннего вмешательства.</p>
+                  <span class="mt-1 inline-block text-xs text-brand-500 group-hover:text-brand-700">nakedhearts.org</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://auri.org.ru" target="_blank" rel="noopener noreferrer" class="group block">
+                  <div class="flex items-start justify-between gap-2">
+                    <h3 class="font-semibold text-brand-900 group-hover:text-brand-600 transition-colors">АУРИ</h3>
+                    <i data-lucide="external-link" class="mt-0.5 h-4 w-4 flex-shrink-0 text-brand-400 group-hover:text-brand-600"></i>
+                  </div>
+                  <p class="mt-1 text-sm leading-relaxed text-brand-700">Общероссийская общественная организация, адвокация интересов людей с РАС.</p>
+                  <span class="mt-1 inline-block text-xs text-brand-500 group-hover:text-brand-700">auri.org.ru</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Горячие линии -->
+          <div class="rounded-2xl border border-brand-100 bg-white/70 p-6 backdrop-blur-sm">
+            <div class="flex items-center gap-3">
+              <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-brand-100 text-brand-700"><i data-lucide="phone" class="h-5 w-5"></i></div>
+              <h2 class="font-display text-lg font-bold text-brand-950">Горячие линии</h2>
+            </div>
+            <ul class="mt-6 space-y-5">
+              <li>
+                <a href="https://autism-fond.ru/help/hotline/" target="_blank" rel="noopener noreferrer" class="group block">
+                  <div class="flex items-start justify-between gap-2">
+                    <h3 class="font-semibold text-brand-900 group-hover:text-brand-600 transition-colors">Телефон доверия (Фонд "Выход")</h3>
+                    <i data-lucide="external-link" class="mt-0.5 h-4 w-4 flex-shrink-0 text-brand-400 group-hover:text-brand-600"></i>
+                  </div>
+                  <p class="mt-1 text-sm leading-relaxed text-brand-700">Психологическая поддержка родителей, консультации.</p>
+                  <span class="mt-1 inline-block text-xs text-brand-500 group-hover:text-brand-700">autism-fond.ru</span>
+                </a>
+              </li>
+              <li>
+                <a href="tel:88002000122" class="group block">
+                  <div class="flex items-start justify-between gap-2">
+                    <h3 class="font-semibold text-brand-900 group-hover:text-brand-600 transition-colors">Детский телефон доверия</h3>
+                    <i data-lucide="phone" class="mt-0.5 h-4 w-4 flex-shrink-0 text-brand-400 group-hover:text-brand-600"></i>
+                  </div>
+                  <p class="mt-1 text-sm leading-relaxed text-brand-700">8-800-2000-122 — бесплатно, анонимно, круглосуточно.</p>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Образование -->
+          <div class="rounded-2xl border border-brand-100 bg-white/70 p-6 backdrop-blur-sm">
+            <div class="flex items-center gap-3">
+              <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-brand-100 text-brand-700"><i data-lucide="book-open" class="h-5 w-5"></i></div>
+              <h2 class="font-display text-lg font-bold text-brand-950">Образовательные ресурсы</h2>
+            </div>
+            <ul class="mt-6 space-y-5">
+              <li>
+                <a href="https://www.autisminternetmodules.org" target="_blank" rel="noopener noreferrer" class="group block">
+                  <div class="flex items-start justify-between gap-2">
+                    <h3 class="font-semibold text-brand-900 group-hover:text-brand-600 transition-colors">Autism Internet Modules</h3>
+                    <i data-lucide="external-link" class="mt-0.5 h-4 w-4 flex-shrink-0 text-brand-400 group-hover:text-brand-600"></i>
+                  </div>
+                  <p class="mt-1 text-sm leading-relaxed text-brand-700">Бесплатные обучающие модули по доказательным практикам.</p>
+                  <span class="mt-1 inline-block text-xs text-brand-500 group-hover:text-brand-700">autisminternetmodules.org</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://autismpdc.fpg.unc.edu" target="_blank" rel="noopener noreferrer" class="group block">
+                  <div class="flex items-start justify-between gap-2">
+                    <h3 class="font-semibold text-brand-900 group-hover:text-brand-600 transition-colors">National Professional Development Center</h3>
+                    <i data-lucide="external-link" class="mt-0.5 h-4 w-4 flex-shrink-0 text-brand-400 group-hover:text-brand-600"></i>
+                  </div>
+                  <p class="mt-1 text-sm leading-relaxed text-brand-700">Обзор доказательных практик и обучающие материалы.</p>
+                  <span class="mt-1 inline-block text-xs text-brand-500 group-hover:text-brand-700">autismpdc.fpg.unc.edu</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-brand-100 bg-brand-950 text-brand-100">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+      <div class="grid gap-8 md:grid-cols-3">
+        <div>
+          <a href="index.html" class="inline-flex items-center gap-2">
+            <div class="flex h-9 w-9 items-center justify-center rounded-lg bg-brand-500 text-white"><i data-lucide="brain" class="h-5 w-5"></i></div>
+            <span class="font-display text-lg font-bold text-white">Путь к ребёнку</span>
+          </a>
+          <p class="mt-4 max-w-sm text-sm text-brand-200">Информационный ресурс о психолого-педагогической реабилитации детей с РАС.</p>
+        </div>
+        <div>
+          <h3 class="font-display text-sm font-semibold uppercase tracking-wider text-white">Разделы</h3>
+          <ul class="mt-4 space-y-2 text-sm">
+            <li><a href="stages.html" class="text-brand-200 hover:text-white transition-colors">Этапы реабилитации</a></li>
+            <li><a href="stages.html#faq" class="text-brand-200 hover:text-white transition-colors">Частые вопросы</a></li>
+            <li><a href="contacts.html" class="text-brand-200 hover:text-white transition-colors">Полезные ресурсы</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-display text-sm font-semibold uppercase tracking-wider text-white">Важно</h3>
+          <p class="mt-4 text-sm text-brand-200">Материалы сайта носят информационно-просветительский характер и не заменяют консультацию специалиста.</p>
+        </div>
+      </div>
+      <div class="mt-12 flex flex-col items-center justify-between gap-4 border-t border-brand-800 pt-8 sm:flex-row">
+        <p class="text-sm text-brand-300">© <span id="year"></span> Путь к ребёнку. Все права защищены.</p>
+        <p class="flex items-center gap-1 text-sm text-brand-300">Сделано с <i data-lucide="heart" class="h-4 w-4 text-sand-400"></i> для особенных семей</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
